@@ -669,7 +669,11 @@ io.on("connection", (socket) => {
       
       // Check if everyone has guessed correctly
       const totalGuessers = rooms[room].players.length - 1; // excluding drawer
-      if (rooms[room].correctGuessers.length >= Math.min(totalGuessers, 1)) {
+      console.log(`🎯 Progress: ${rooms[room].correctGuessers.length}/${totalGuessers} players guessed correctly`);
+
+if (rooms[room].correctGuessers.length >= totalGuessers && totalGuessers > 0) {
+  // End turn when ALL non-drawer players have guessed correctly
+  console.log(`🎉 All players guessed correctly! Ending turn.`);
         // End turn when at least one person guesses correctly (you can modify this logic)
         setTimeout(() => {
           if (rooms[room] && rooms[room].gameInProgress) {
