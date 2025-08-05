@@ -8,7 +8,7 @@ const MongoLeaderboard = () => {
   const fetchLeaderboard = async () => {
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:5000/leaderboard");
+      const response = await fetch("https://drawbattle-realtime.onrender.com/api/combined-leaderboard");
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
