@@ -9,12 +9,12 @@ require('dotenv').config();
 const app = express();             // ✅ Moved up before using `app`
 app.use(express.json());
 app.use(cors());
+
 mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
   serverSelectionTimeoutMS: 30000, // 30 seconds
   socketTimeoutMS: 45000           // 45 seconds
-})
+});
+
 .then(() => console.log("✅ MongoDB connected"))
 .catch((err) => console.log("❌ MongoDB connection error:", err));
 const playerSchema = new mongoose.Schema({
@@ -798,6 +798,8 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(5000, () => {
-  console.log("🚀 Server listening on port 5000");
+const PORT = process.env.PORT || 5000;
+
+server.listen(PORT, () => {
+  console.log(`🚀 Server listening on port ${PORT}`);
 });
