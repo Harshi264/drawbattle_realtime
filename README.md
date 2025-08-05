@@ -62,9 +62,6 @@ File Ops & Locking	fs.promises, proper-lockfile ^4.1.2
 Dev Tools	Nodemon ^3.1.10
 
 📦 Project Structure
-bash
-Copy
-Edit
 /client (React Frontend)
 ├── /components         # Reusable UI components
 ├── /pages              # Game screens (Home, Canvas, GameRoom)
@@ -91,41 +88,28 @@ MongoDB instance (local or cloud)
 Setup Instructions
 Clone the repo:
 
-bash
-Copy
-Edit
+
 git clone https://github.com/Harshi264/draw-battle.git
 cd draw-battle
 Install dependencies:
 
-bash
-Copy
-Edit
+
 cd client
 npm install
 cd ../server
 npm install
 Environment Setup (server/.env):
 
-ini
-Copy
-Edit
 MONGO_URI=your_mongodb_connection_string
 PORT=5000
 Run the app:
 
 Start backend:
 
-bash
-Copy
-Edit
 cd server
 npm run dev
 Start frontend:
 
-bash
-Copy
-Edit
 cd client
 npm start
 Visit: https://drawbattle-realtime.vercel.app/
