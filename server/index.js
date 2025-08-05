@@ -13,8 +13,7 @@ app.use(cors());
 mongoose.connect(process.env.MONGO_URI, {
   serverSelectionTimeoutMS: 30000, // 30 seconds
   socketTimeoutMS: 45000           // 45 seconds
-});
-
+})
 .then(() => console.log("✅ MongoDB connected"))
 .catch((err) => console.log("❌ MongoDB connection error:", err));
 const playerSchema = new mongoose.Schema({
