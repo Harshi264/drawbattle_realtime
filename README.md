@@ -145,5 +145,3 @@ Contributions are welcome! Fork the repo, create a branch, and submit a pull req
 
 📄 License
 This project is licensed under the MIT License.
-
-Would you like me to generate this into a README.md file for you?
