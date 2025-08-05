@@ -9,7 +9,9 @@ require('dotenv').config();
 const app = express();             // ✅ Moved up before using `app`
 app.use(express.json());
 app.use(cors());
-
+app.get("/", (req, res) => {
+  res.send("Backend running ✅");
+});
 mongoose.connect(process.env.MONGO_URI, {
   serverSelectionTimeoutMS: 30000, // 30 seconds
   socketTimeoutMS: 45000           // 45 seconds
