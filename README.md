@@ -94,7 +94,7 @@ Clone the repo:
 bash
 Copy
 Edit
-git clone https://github.com/your-username/draw-battle.git
+git clone https://github.com/Harshi264/draw-battle.git
 cd draw-battle
 Install dependencies:
 
@@ -128,7 +128,7 @@ Copy
 Edit
 cd client
 npm start
-Visit: http://localhost:3000
+Visit: https://drawbattle-realtime.vercel.app/
 
 🔧 Scripts & Commands
 Frontend
